@@ -4,7 +4,7 @@ import axios from 'axios';
 import "./Login.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
+import { MDBContainer, MDBBtn, MDBInput } from 'mdb-react-ui-kit';
 import { faF, faG, faL,  } from '@fortawesome/free-solid-svg-icons';
 import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';

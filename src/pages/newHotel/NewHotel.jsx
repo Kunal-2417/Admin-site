@@ -5,13 +5,13 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import { useState } from "react";
 import axios from "axios";
 import { HotelInputs } from "../../formSource";
-import { useFetcher } from "react-router-dom";
+// import { useFetcher } from "react-router-dom";
 import useFetch from "../../hook/usefetch";
-import { Alert } from 'react-alert'
+// import { Alert } from 'react-alert'
 
 
 const NewHotel = () => {
-    const { data, loading, error } = useFetch(`/hotelroom/get`);
+    const { data, loading} = useFetch(`/hotelroom/get`);
 
   const [files, setFiles] = useState("");
 
