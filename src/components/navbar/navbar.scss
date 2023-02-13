@@ -1,4 +1,4 @@
-.navbar {
+.nnavbar {
   height: 50px;
   border-bottom: 0.5px solid rgb(231, 228, 228);
   display: flex;
@@ -6,14 +6,14 @@
   font-size: 14px;
   color: #555;
 
-  .wrapper {
+  .wwrapper {
     width: 100%;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .search {
+    .ssearch {
       display: flex;
       align-items: center;
       border: 0.5px solid lightgray;
@@ -30,27 +30,27 @@
       }
     }
 
-    .items {
+    .iitems {
       display: flex;
       align-items: center;
 
-      .item {
+      .iitem {
         display: flex;
         align-items: center;
         margin-right: 20px;
         position: relative;
 
-        .icon {
+        .iicon {
           font-size: 20px;
         }
 
-        .avatar {
+        .aavatar {
           width: 30px;
           height: 30px;
           border-radius: 50%;
         }
 
-        .counter {
+        .ccounter {
           width: 15px;
           height: 15px;
           background-color: red;

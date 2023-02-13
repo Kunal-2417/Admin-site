@@ -10,45 +10,53 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 
 const Navbar = () => {
-  const { dispatch } = useContext(DarkModeContext);
+  const { dispatc} = useContext(DarkModeContext);
+const userInfo = JSON.parse(localStorage.getItem('user'));
+  console.log(userInfo)
+  const imgurl=userInfo.img;
+  const loginperson=userInfo.username;
+  console.log(loginperson)
+  //x.img?
+  //image of user stored in localstorage?
 
   return (
-    <div className="navbar">
-      <div className="wrapper">
-        <div className="search">
+    <div className="nnavbar">
+      <div className="wwrapper">
+        <div className="ssearch">
           <input type="text" placeholder="Search..." />
           <SearchOutlinedIcon />
         </div>
-        <div className="items">
-          <div className="item">
-            <LanguageOutlinedIcon className="icon" />
+        <div className="iitems">
+          {/* <div className="iitem">
+            <LanguageOutlinedIcon className="iicon" />
             English
-          </div>
-          <div className="item">
+          </div> */}
+          <div className="iitem">
             <DarkModeOutlinedIcon
-              className="icon"
-              onClick={() => dispatch({ type: "TOGGLE" })}
+              className="iicon"
+              onClick={() => dispatc({ type: "TOGGLE" })}
             />
           </div>
-          <div className="item">
-            <FullscreenExitOutlinedIcon className="icon" />
-          </div>
-          <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
+          {/* <div className="iitem">
+            <FullscreenExitOutlinedIcon className="iicon" />
+          </div> */}
+          {/* <div className="iitem">
+            <NotificationsNoneOutlinedIcon className="iicon" />
             <div className="counter">1</div>
+          </div> */}
+          {/* <div className="iitem">
+            <ChatBubbleOutlineOutlinedIcon className="iicon" />
+            <div className="ccounter">2</div>
+          </div> */}
+          <div className="iitem">
+            {userInfo.username}
+            {/* <ListOutlinedIcon className="iicon" /> */}
           </div>
-          <div className="item">
-            <ChatBubbleOutlineOutlinedIcon className="icon" />
-            <div className="counter">2</div>
-          </div>
-          <div className="item">
-            <ListOutlinedIcon className="icon" />
-          </div>
-          <div className="item">
+          <div className="iitem">
             <img
-              src="https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src={imgurl}
               alt=""
-              className="avatar"
+              className="aavatar"
             />
           </div>
         </div>
